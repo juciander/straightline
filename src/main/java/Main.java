@@ -1,4 +1,7 @@
 import javaslang.collection.List;
+import javaslang.render.text.Boxes;
+
+import java.time.Clock;
 
 public class Main {
 
@@ -12,7 +15,10 @@ public class Main {
                                                       OpExp.Op.PLUS)),
                               new PrintStm(List.of(new IdExp("x"))));
 
-      System.out.println(p);
+      //System.out.println(p);
+      System.out.println( p.toTree().draw());
+      System.out.println(Boxes.box(p.toTree()));
+
 
    }
 }
